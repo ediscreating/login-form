@@ -1,0 +1,60 @@
+@mixin toggle-background($bg-color) {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.18), rgba(0, 0, 0, 0.18)),
+              linear-gradient(0deg, $bg-color, $bg-color);
+  box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.35),
+              1px 1px 1px 0px rgb(255, 255, 255);
+}
+
+.switch {
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 9px;
+    height: 8px;
+    margin-right: 6px;
+    background: url(../assets/img/tick.png) no-repeat;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__toggle {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 14px;
+    vertical-align: middle;
+    border-radius: 7px;
+    @include toggle-background(#98c878);
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      right: -1px;
+      top: -1px;
+      width: 16px;
+      height: 16px;
+      border-radius: 100%;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.09), rgb(255, 255, 255)),
+                  linear-gradient(0deg, #ececec, #ececec);
+      box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.1),
+                  1px 1px 3px 0px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  &--is-off {
+    &:before {
+      background: url(../assets/img/cross.png) no-repeat;
+    }
+
+    & .switch__toggle {
+      @include toggle-background(#d08181);
+
+      &:after {
+        left: -1px;
+      }
+    }
+  }
+}

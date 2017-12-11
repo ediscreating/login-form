@@ -1,0 +1,70 @@
+.field-with-symbol {
+  display: inline-block;
+  position: relative;
+  height: 30px;
+  width: 218px;
+
+  &__input {
+    height: 100%;
+    width: 100%;
+    padding-left: 42px;
+    box-sizing: border-box;
+    border: 1px solid #d4d4d4;
+    border-image: linear-gradient(0deg, #d4d4d4, #e5e5e8) 1;
+    border-radius: 2px;
+    font-family: 'Roboto', sans-serif;
+    color: #999999;
+    font-size: 14px;
+  }
+
+  &__separator {
+    position: absolute;
+    top: 1px;
+    left: 29px;
+    display: block;
+    width: 5.6px;
+    height: 28px;
+    fill: #e5e5e5;
+  }
+
+  &__focus-gradient {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 32.3px;
+    height: 28px;
+    opacity: 0;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 7.5px;
+    margin-top: -7.5px;
+    width: 15px;
+    height: 15px;
+    fill: #999;
+    z-index: 11;
+  }
+
+  &__input:focus {
+    outline: none;
+    border: 1px solid #93c273;
+    box-shadow: 0 0 3px 0 rgba(114, 152, 90, 0.40);
+    color: #333333;
+
+    ~ .field-with-symbol {
+      &__separator {
+        fill: #d6d6d6;
+      }
+
+      &__icon {
+        fill: #333333;
+      }
+
+      &__focus-gradient {
+        opacity: 1;
+      }
+    }
+  }
+}

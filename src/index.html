@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Signin</title>
+  </head>
+  <body>
+    <div class="visuallyhidden">
+      <!-- inject:svg -->
+      <!-- endinject -->
+    </div>
+    <div class="container">
+      <svg class="signin-icon js-signin-toggle">
+        <use xlink:href="#signin"></use>
+      </svg>
+      <div class="layered-block js-layered-block">
+        <svg class="layered-block__close-btn" xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="#close"></use>
+        </svg>
+        <div class="layered-block__content">
+          <div class="auth-form-wrapper">
+            <form class="auth-form js-auth-form" method="post">
+              <img class="auth-form__user-avatar" src="assets/img/person-avatar.png" alt="User Avatar Thumbnail">
+              <div class="field-with-symbol auth-form__email-field">
+                <input class="field-with-symbol__input" type="email" name="email" required>
+                <svg class="field-with-symbol__icon" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="#user-icon"></use>
+                </svg>
+                <svg class="field-with-symbol__focus-gradient" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="#gradient-bg"></use>
+                </svg>
+                <svg class="field-with-symbol__separator" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="#input-separator"></use>
+                </svg>
+              </div>
+              <div class="field-with-symbol auth-form__password-field">
+                <input class="field-with-symbol__input" type="password" name="password" minlength="5" required>
+                <svg class="field-with-symbol__icon" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="#key-icon"></use>
+                </svg>
+                <svg class="field-with-symbol__focus-gradient" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="#gradient-bg"></use>
+                </svg>
+                <svg class="field-with-symbol__separator" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="#input-separator"></use>
+                </svg>
+              </div>
+              <a class="auth-form__link" href="#">Forgot your password</a>
+              <div class="auth-form__bottom-content">
+                <span class="switch js-form-switch">
+                  <span class="switch__toggle"></span>
+                </span>
+                <p class="auth-form__remember-user">
+                  Remember?
+                </p>
+                <input class="auth-form__submit-btn auth-form__submit-btn--is-disabled" type="submit" name="submit" value="Sign in">
+              </div>
+            </form>
+          </div>
+        </div>
+        <p class="signup-offer">Not a registered user yet? <a href="#">Sign up now!</a></p>
+      </div>
+    </div>
+    <!--build:js js/main.js -->
+      <script src="js/utils.js" charset="utf-8"></script>
+      <script src="js/LayeredBlock.js" charset="utf-8"></script>
+      <script src="js/Switch.js" charset="utf-8"></script>
+      <script src="js/AuthForm.js" charset="utf-8"></script>
+      <script src="js/index.js" charset="utf-8"></script>
+    <!-- endbuild -->
+  </body>
+</html>

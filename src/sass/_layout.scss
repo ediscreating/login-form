@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  background-color: #d6d6d6;
+  background-image: url(../assets/img/subtle_freckles.png);
+  overflow: hidden;
+}
+
+.auth-form-wrapper {
+  display: inline-block;
+  margin-top: 15px;
+  margin-left: 66px;
+}
+
+.signin-icon {
+  margin-bottom: 20px;
+  width: 20px;
+  height: 20px;
+  fill: #999999;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

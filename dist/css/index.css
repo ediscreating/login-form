@@ -1,0 +1,241 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url("../assets/fonts/Roboto-Regular.eot");
+  src: url("../assets/fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Roboto-Regular.woff") format("woff"), url("../assets/fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif; }
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; }
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  background-color: #d6d6d6;
+  background-image: url(../assets/img/subtle_freckles.png);
+  overflow: hidden; }
+
+.auth-form-wrapper {
+  display: inline-block;
+  margin-top: 15px;
+  margin-left: 66px; }
+
+.signin-icon {
+  margin-bottom: 20px;
+  width: 20px;
+  height: 20px;
+  fill: #999999; }
+  .signin-icon:hover {
+    cursor: pointer; }
+
+.layered-block {
+  position: relative;
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; }
+  .layered-block__close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 13px;
+    height: 13px;
+    z-index: 4; }
+    .layered-block__close-btn:hover {
+      cursor: pointer; }
+  .layered-block__content {
+    position: relative;
+    width: 350px;
+    height: 250px;
+    z-index: 3;
+    box-sizing: border-box;
+    border: 1px solid #e0e0e0;
+    background-color: white; }
+  .layered-block:before, .layered-block:after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 250px;
+    box-sizing: border-box;
+    border: 1px solid #e0e0e0;
+    background-color: white; }
+  .layered-block:before {
+    width: 348px;
+    top: 2px;
+    left: 1px;
+    z-index: 2; }
+  .layered-block:after {
+    width: 346px;
+    top: 4px;
+    left: 2px;
+    z-index: 1;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.25); }
+  .layered-block--hidden {
+    opacity: 0;
+    transform: translateY(25%); }
+
+.field-with-symbol {
+  display: inline-block;
+  position: relative;
+  height: 30px;
+  width: 218px; }
+  .field-with-symbol__input {
+    height: 100%;
+    width: 100%;
+    padding-left: 42px;
+    box-sizing: border-box;
+    border: 1px solid #d4d4d4;
+    border-image: linear-gradient(0deg, #d4d4d4, #e5e5e8) 1;
+    border-radius: 2px;
+    font-family: 'Roboto', sans-serif;
+    color: #999999;
+    font-size: 14px; }
+  .field-with-symbol__separator {
+    position: absolute;
+    top: 1px;
+    left: 29px;
+    display: block;
+    width: 5.6px;
+    height: 28px;
+    fill: #e5e5e5; }
+  .field-with-symbol__focus-gradient {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 32.3px;
+    height: 28px;
+    opacity: 0; }
+  .field-with-symbol__icon {
+    position: absolute;
+    top: 50%;
+    left: 7.5px;
+    margin-top: -7.5px;
+    width: 15px;
+    height: 15px;
+    fill: #999;
+    z-index: 11; }
+  .field-with-symbol__input:focus {
+    outline: none;
+    border: 1px solid #93c273;
+    box-shadow: 0 0 3px 0 rgba(114, 152, 90, 0.4);
+    color: #333333; }
+    .field-with-symbol__input:focus ~ .field-with-symbol__separator {
+      fill: #d6d6d6; }
+    .field-with-symbol__input:focus ~ .field-with-symbol__icon {
+      fill: #333333; }
+    .field-with-symbol__input:focus ~ .field-with-symbol__focus-gradient {
+      opacity: 1; }
+
+.switch:before {
+  content: '';
+  display: inline-block;
+  width: 9px;
+  height: 8px;
+  margin-right: 6px;
+  background: url(../assets/img/tick.png) no-repeat; }
+
+.switch:hover {
+  cursor: pointer; }
+
+.switch__toggle {
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 14px;
+  vertical-align: middle;
+  border-radius: 7px;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.18), rgba(0, 0, 0, 0.18)), linear-gradient(0deg, #98c878, #98c878);
+  box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.35), 1px 1px 1px 0px white; }
+  .switch__toggle:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: -1px;
+    top: -1px;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.09), white), linear-gradient(0deg, #ececec, #ececec);
+    box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.1), 1px 1px 3px 0px rgba(0, 0, 0, 0.25); }
+
+.switch--is-off:before {
+  background: url(../assets/img/cross.png) no-repeat; }
+
+.switch--is-off .switch__toggle {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.18), rgba(0, 0, 0, 0.18)), linear-gradient(0deg, #d08181, #d08181);
+  box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.35), 1px 1px 1px 0px white; }
+  .switch--is-off .switch__toggle:after {
+    left: -1px; }
+
+.auth-form {
+  width: 218px; }
+  .auth-form__user-avatar {
+    display: block;
+    width: 65px;
+    height: 65px;
+    margin: 0 auto; }
+  .auth-form__email-field {
+    margin: 11px auto 0; }
+  .auth-form__password-field {
+    margin: 12px auto 0; }
+  .auth-form__remember-user {
+    display: inline-block;
+    color: #999999;
+    font-size: 12px;
+    margin: 0 0 0 8px; }
+  .auth-form__link {
+    text-decoration: none;
+    font-size: 12px;
+    color: #999999; }
+  .auth-form__bottom-content {
+    margin-top: 20px; }
+    .auth-form__bottom-content:after {
+      content: '';
+      display: block;
+      clear: both; }
+  .auth-form__submit-btn {
+    float: right;
+    width: 60px;
+    height: 23px;
+    color: white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+    border-radius: 3px;
+    background-color: #93c273; }
+    .auth-form__submit-btn:hover {
+      cursor: pointer;
+      background-color: #a1ca85; }
+    .auth-form__submit-btn--is-disabled {
+      background-color: #cccccc; }
+      .auth-form__submit-btn--is-disabled:hover {
+        cursor: default;
+        background-color: #cccccc; }
+
+.signup-offer {
+  text-align: center;
+  font-size: 12px;
+  color: #999999; }
+  .signup-offer a {
+    color: #72985a;
+    text-decoration: none; }
